@@ -25,4 +25,5 @@ def quickSort(arr, left, right):
 quickSort(arr, 0, len(arr)-1)
 print(arr)
 
-#O(nlogn) - iterating through list is n, splitting it in  half with the recursions is logn
+#O(nlogn) - iterating through list is n, splitting it in  half with the recursions is logn, so together it becomes O(nlogn)
+#The worst case is O(n^2), but this can be remedied by various improvements to the base quicksort algorithm
