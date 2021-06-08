@@ -27,7 +27,7 @@ def mergeSort(arr):
 """
 this code splits down arr until it reaches a length of 1
 once it does that it looks at the first element in the left array, compares it to the first in the right, and adds the lesser of the two to arr
-it does that until either i or j reaches the end of their list, and then adds on the remainder from either i or j, 
+it does that until either i or j reaches the right of their list, and then adds on the remainder from either i or j, 
 the remainder will always be the largest number and there will only be one at most, which happens when the original array has an odd length
 """
 mergeSort(arr)
