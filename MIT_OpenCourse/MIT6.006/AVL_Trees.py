@@ -133,7 +133,7 @@ def traverse(root, space):
     print()
     
     for i in range(10, space):
-        print(end = " ")
+        print(end = " ") #without this end it doesnt work print properly and idk why 
    
     print(root.data)
     traverse(root.left, space)
@@ -146,10 +146,10 @@ nums = [4,8,8,69,420,4,-1,1]
 for num in nums:
     root = myTree.insert(root, num)
   
-print("Preorder Traversal after insertion -")
+print("Traversal after insertion -")
 traverse(root, 0)
   
 root = myTree.delete(root, 8)
   
-print("Preorder Traversal after deletion -")
+print("Traversal after deletion -")
 traverse(root, 0)
