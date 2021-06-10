@@ -45,7 +45,7 @@ Node* insertNode(Node* root, int key){
 }
 /* function to delete the given deepest node
 (d_node) in binary tree */
-void deletDeepest( Node* root,
+void deleteDeepest( Node* root,
                    Node* d_node)
 {
     queue< Node*> q;
@@ -120,7 +120,7 @@ Node* deletion( Node* root, int key)
  
     if (key_node != NULL) {
         int x = temp->key;
-        deletDeepest(root, temp);
+        deleteDeepest(root, temp);
         key_node->key = x;
     }
     return root;
