@@ -22,6 +22,3 @@ def countingSort(arr):
     return ans
 
 print(countingSort(arr))
-arr = [9,8,7,55,5,54,2,1,1]
-
-    
