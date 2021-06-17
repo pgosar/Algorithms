@@ -30,8 +30,10 @@ def karatsuba(x,y):
 print(karatsuba(23,24))
 print(karatsuba(3,-4))
 
-def karatThreeLine(x,y):
+def karatsubaOneLine(x,y):
     if max(x.bit_length(), y.bit_length()) < 2:
         return lookuptable[(x,y)]
-    #i tried doing this for fun and it broke, I'm not gonna bug fix it
-   # return (karatsuba(x - ((x >> max(x.bit_length(), y.bit_length()) < 2) << max(x.bit_length(), y.bit_length()) < 2), y- ((y >> max(x.bit_length(), y.bit_length()) < 2) << max(x.bit_length(), y.bit_length()) < 2))+ ((karatsuba(x-((x >> max(x.bit_length(), y.bit_length())) << max(x.bit_length(), y.bit_length())) + x >> max(x.bit_length(), y.bit_length()), y - ((y >> max(x.bit_length(), y.bit_length())) << max(x.bit_length(), y.bit_length())) + y >>max(x.bit_length(), y.bit_length()))- karatThreeLine(x - ((x >> max(x.bit_length(), y.bit_length()) < 2) << max(x.bit_length(), y.bit_length()) < 2), y- ((y >> max(x.bit_length(), y.bit_length()) < 2) << max(x.bit_length(), y.bit_length()) < 2)) - karatsuba(x >> max(x.bit_length(), y.bit_length()), y >> max(x.bit_length(), y.bit_length()))) << max(x.bit_length(), y.bit_length())) + (karatsuba(x >> max(x.bit_length(), y.bit_length()), y >> max(x.bit_length(), y.bit_length())) << (max(x.bit_length(), y.bit_length()) << 1)))
+    #i tried doing this for fun and it didnt work, I'm not gonna bug fix it. i would need to write a new method to do the recursion
+    return (karatsuba(x - ((x >> (max(x.bit_length(), y.bit_length()) >> 1)) << (max(x.bit_length(), y.bit_length()) >> 1)), y- ((y >> (max(x.bit_length(), y.bit_length()) >> 1)) << (max(x.bit_length(), y.bit_length()) >> 1)))+ ((karatsuba(x-((x >> (max(x.bit_length(), y.bit_length()) >> 1)) << (max(x.bit_length(), y.bit_length()) >> 1)) + x >> (max(x.bit_length(), y.bit_length()) >> 1), y - ((y >> (max(x.bit_length(), y.bit_length()) >> 1)) << (max(x.bit_length(), y.bit_length()) >> 1)) + y >>(max(x.bit_length(), y.bit_length()) >> 1))- karatsuba(x - ((x >> (max(x.bit_length(), y.bit_length()) >> 1) < 2) << (max(x.bit_length(), y.bit_length()) >> 1) < 2), y- ((y >> (max(x.bit_length(), y.bit_length()) >> 1) < 2) << (max(x.bit_length(), y.bit_length()) >> 1) < 2)) - karatsuba(x >> (max(x.bit_length(), y.bit_length()) >> 1), y >> (max(x.bit_length(), y.bit_length()) >> 1))) << (max(x.bit_length(), y.bit_length()) >> 1)) + (karatsuba(x >> (max(x.bit_length(), y.bit_length()) >> 1), y >> (max(x.bit_length(), y.bit_length()) >> 1)) << ((max(x.bit_length(), y.bit_length()) >> 1) << 1)))
+  
+print(karatsubaOneLine(23,24))
