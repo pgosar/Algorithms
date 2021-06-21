@@ -1,5 +1,6 @@
 #this is an algorithm to find the shortest path in a nonnegative acyclic graph which can be either directed or undirected
 #this uses a list to represent the graph. 
+#time complexity: O(v^2)
 import sys
 
 class Graph():
