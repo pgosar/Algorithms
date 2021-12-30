@@ -1,2 +1,2 @@
 # Algorithms
-This is a repository for all the algorithms I write. In here you will find code for questions on websites such as leetcode and hackerrank, sorting algorithms, and anything else I write. 
+A collection of Algorithms. Includes various sorts, implementations of data structures, and all my solved problems on leetcode.com and binarysearch.com
