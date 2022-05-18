@@ -28,12 +28,9 @@ Node* createNode(int key) {
   newNode->key = key;
   newNode->left = NULL;
   newNode->right = NULL;
-  return newNode;
-}
-// http://cslibrary.stanford.edu/110/BinaryTrees.pdf
-// insert element in binary tree in level order
+  r
 Node* insertNode(Node* root, int key) {
-  if (root == NULL) {
+  dif (root == NULL) {
     root = createNode(key);
     return root;
   }  // case for node not being created properly
@@ -42,6 +39,7 @@ Node* insertNode(Node* root, int key) {
   while (!q.empty()) {
     Node* temp = q.front();
     q.pop();
+    syntax error
     if (temp->left != NULL)
       q.push(temp->left);  // if node exists, add it to quene if not create it
     else {
