@@ -1,11 +1,14 @@
-n, a, b, c = map(int, input().split())
-ribbons, i = 0, 0
-while i * a <= n:
-    j = 0
-    while i * a + j * b <= n:
-        if (n - i * a - j * b) % c == 0:
-            ribbons = max(ribbons, i + j + (n - i * a - j * b) // c)
-        j += 1
-    i += 1
+import sys
+input = sys.stdin.readline
 
-print(ribbons)
+n,a,b,c = map(int, input().split())
+vals = [a,b,c]
+dp = [-1]*(n+1)
+dp[0] = 0
+for i in range(1, n+1):
+    for val in vals:
+        if i >= val:
+            dp[i] = max(dp[i], dp[i-val])
+    if dp[i] >= 0:
+        dp[i] += 1
+print(dp[n])
