@@ -1,4 +1,6 @@
-class Solution:
+cclass Solution:
+    def addBinary(self, a: str, b: str) -> str:
+        return bin(int(a,2)+int(b,2))[2:]lass Solution:
     def addBinary(self, a: str, b: str) -> str:
         if a=="0" and b=="0":
             return "0"
@@ -21,3 +23,8 @@ class Solution:
             num //= 2
         ans = ans[1:]
         return ans[::-1]
+
+
+class Solution:
+    def addBinary(self, a: str, b: str) -> str:
+        return bin(int(a,2)+int(b,2))[2:]
